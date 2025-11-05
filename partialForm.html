@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>partial Form</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <div
+        class="relative min-h-screen bg-gradient-to-br from-purple-900 via-gray-900 to-indigo-900 flex flex-col justify-center items-center p-4 overflow-hidden">
+        <!-- Elementos de graffiti decorativos -->
+        <div class="absolute top-10 left-10 w-32 h-32 bg-pink-500 rounded-full opacity-30 floating"></div>
+        <div class="absolute top-20 right-20 w-24 h-24 bg-blue-500 rounded-full opacity-20 floating floating-delay-1">
+        </div>
+        <div
+            class="absolute bottom-20 left-20 w-40 h-40 bg-yellow-500 rounded-full opacity-20 floating floating-delay-2">
+        </div>
+        <div class="w-full max-w-lg items-center relative z-10">
+            <div class="bg-black/30 backdrop-blur-lg rounded-2xl overflow-hidden shadow-xl border border-purple-500/20">
+                <div class="p-10" style="padding: 2.5rem;">
+                    <div class="text-center flex flex-col justify-center items-center mb-8">
+                        <img class="w-64" src="/img/VERSIÓN HORIZONTAL.png" alt="">
+                        <p class="mt-4 text-gray-300">Recuerda diligenciar los datos correctamente para evitar problemas
+                            de registro o recarga</p>
+                        <form  class="flex-1 w-full flex flex-col gap-2 pt-4">
+                            <div class="flex flex-col items-start">
+                                <label for="id"
+                                    class="block text-sm font-medium text-gray-200 mb-2">Identificación</label>
+                                <div class="relative rounded-md shadow-sm flex gap-2 w-full">
+                                    <select
+                                        class="block  pl-3 pr-3 py-3 border border-purple-500/30 bg-white/10 text-white placeholder-gray-400 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                                        name="type_id" id="">
+                                        <option value="TI">TI</option>
+                                        <option selected value="CC">CC</option>
+                                        <option value="CE">CE</option>
+                                        <option value="PP">PP</option>
+                                    </select>
+                                    <input placeholder="Ingresa tu número de identificación" id="id" name="id"
+                                        wire:model="user_id"
+                                        class="flex-1 block w-full pl-3 pr-3 py-3 border border-purple-500/30 bg-white/10 text-white placeholder-gray-400 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                                        type="number" autofocus autocomplete="username" />
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-start">
+                                <label for="name" class="block text-sm font-medium text-gray-200 mb-2">Nombre</label>
+                                <div class="relative rounded-md shadow-sm flex-1 w-full">
+                                    <input placeholder="Ingresa tu nombre" id="name" name="name"
+                                        wire:model="user_id"
+                                        class="block w-full pl-3 pr-3 py-3 border border-purple-500/30 bg-white/10 text-white placeholder-gray-400 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                                        type="text" autofocus autocomplete="username" />
+                                </div>
+                            </div>
+                            <div class="flex flex-col items-start justify-start">
+                                <label for="tel" class="block text-sm font-medium text-gray-200 mb-2">Celular</label>
+                                <div class="relative rounded-md shadow-sm w-full">
+                                    <input placeholder="Ingresa tu número de celular" id="tel" name="tel"
+                                        wire:model="user_id"
+                                        class="block w-full pl-3 pr-3 py-3 border border-purple-500/30 bg-white/10 text-white placeholder-gray-400 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"
+                                        type="tel" autofocus autocomplete="username" />
+                                </div>
+                            </div>
+                            <!-- Login Button -->
+                            <div class="mt-6 cursor-mano flex justify-center gap-4" id="btn-container">
+                                <a href="index.html"
+                                    class="flex-1 cursor-pointer group relative w-full flex justify-center p-3 rounded-lg text-black overflow-hidden transition-all duration-300 ease-out  bg-gray-200 shadow-lg glow-on-hover cursor-mano">
+                                    <!-- Líneas animadas en los bordes -->
+                                    <span
+                                        class="absolute top-0 left-0 w-0 h-1 bg-white transition-all duration-300 group-hover:w-full"></span>
+                                    <span
+                                        class="absolute bottom-0 right-0 w-0 h-1 bg-white transition-all duration-300 group-hover:w-full"></span>
+                                    <span
+                                        class="absolute top-0 right-0 h-0 w-1 bg-white transition-all duration-300 delay-150 group-hover:h-full"></span>
+                                    <span
+                                        class="absolute bottom-0 left-0 h-0 w-1 bg-white transition-all duration-300 delay-150 group-hover:h-full"></span>
+
+                                    <!-- Efecto de onda/brillo -->
+                                    <span
+                                        class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+
+                                    <!-- Íconos y texto -->
+                                    <span class="relative flex items-center cursor-mano">
+                                        <span class="font-medium cursor-mano">Volver</span>
+                                    </span>
+                                </a>
+                                <button href="fullForm.html"
+                                    class="flex-1 cursor-pointer group relative w-full flex justify-center p-3 rounded-lg text-white overflow-hidden transition-all duration-300 ease-out bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-pink-500 shadow-lg glow-on-hover cursor-mano">
+                                    <!-- Líneas animadas en los bordes -->
+                                    <span
+                                        class="absolute top-0 left-0 w-0 h-1 bg-white transition-all duration-300 group-hover:w-full"></span>
+                                    <span
+                                        class="absolute bottom-0 right-0 w-0 h-1 bg-white transition-all duration-300 group-hover:w-full"></span>
+                                    <span
+                                        class="absolute top-0 right-0 h-0 w-1 bg-white transition-all duration-300 delay-150 group-hover:h-full"></span>
+                                    <span
+                                        class="absolute bottom-0 left-0 h-0 w-1 bg-white transition-all duration-300 delay-150 group-hover:h-full"></span>
+
+                                    <!-- Efecto de onda/brillo -->
+                                    <span
+                                        class="absolute right-0 w-8 h-32 -mt-12 transition-all duration-1000 transform translate-x-12 bg-white opacity-10 rotate-12 group-hover:-translate-x-40 ease"></span>
+
+                                    <!-- Íconos y texto -->
+                                    <span class="relative flex items-center cursor-mano">
+                                        <span class="font-medium cursor-mano">Guardar</span>
+                                    </span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
